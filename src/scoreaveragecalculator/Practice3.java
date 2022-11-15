@@ -9,14 +9,11 @@ import java.util.Scanner;
 public class Practice3 {
 
     public static void main(String[] args) {
-        int numLimit;
+        int numLimit, i = 1, a = 1;
 
         System.out.println("Please enter limiting number:");
         Scanner sc = new Scanner(System.in);
         numLimit = sc.nextInt();
-
-        int i = 1;
-        int a = 1;
 
         System.out.println("\nResult:");
         while (i < numLimit || a < numLimit) {
