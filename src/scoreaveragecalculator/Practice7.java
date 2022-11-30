@@ -26,6 +26,7 @@ public class Practice7 {
 
         System.out.println("\nPlease enter " + length + " numbers:");
         for (int i = 0; i < length; i++) {
+            System.out.print((i+1)+". ");
             num = sc.nextInt();
             arr[i] = num;
         }
