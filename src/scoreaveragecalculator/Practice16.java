@@ -4,18 +4,18 @@ import java.util.Scanner;
 
 public class Practice16 {
 
-    static void methodByPattern(int n, int side, int temp) {
-        if (side == 0 && n > 0 && n <= temp) {
+    static void methodByPattern(int n, boolean side, int temp) {
+        if (side && n > 0 && n <= temp) {
             System.out.print(n + " ");
             n -= 5;
-            methodByPattern(n, 0, temp);
+            methodByPattern(n, true, temp);
             if (n <= 0) {
-                methodByPattern(n, 1, temp);
+                methodByPattern(n, false, temp);
             }
-        } else if (side == 1 && n <= temp) {
+        } else if (side == false && n <= temp) {
             System.out.print(n + " ");
             n += 5;
-            methodByPattern(n, 1, temp);
+            methodByPattern(n, false, temp);
         }
     }
 
@@ -26,6 +26,6 @@ public class Practice16 {
         n = sc.nextInt();
         int temp = n;
         System.out.println();
-        methodByPattern(n, 0, temp);
+        methodByPattern(n, true, temp);
     }
 }
